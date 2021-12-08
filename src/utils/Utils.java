@@ -19,7 +19,7 @@ public final class Utils {
     }
 
     /**
-     * Converts a string to a CAtegoty object
+     * Converts a string to a Category object
      * @param categoryObject string to be converted
      * @return Category object
      */
@@ -56,7 +56,7 @@ public final class Utils {
     /**
      * Converts a string to a City object
      * @param city String to be converted
-     * @return City object
+     * @return City enum object
      */
     public static Cities stringToCities(final String city) {
         return switch (city) {
@@ -104,7 +104,7 @@ public final class Utils {
     /**
      * Simulates a round based on the data stored in simulation
      * @param simulation current round data data
-     * @return list of children to be written in the JSON output
+     * @return list of children information to be written in the JSON output
      */
     public static List<Map<String, Object>> simulateRound(final Simulation simulation) {
         List<Map<String, Object>> currentRound = new ArrayList<>();

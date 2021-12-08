@@ -6,7 +6,7 @@ import java.util.Map;
 
 public interface VisitorInterface {
     /**
-     * "Visits" the simulation and creates the output
+     * "Visits" the simulation object and stores the output
      * @param simulation where the data is stored
      * @param array output array
      */

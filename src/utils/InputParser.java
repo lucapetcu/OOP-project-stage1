@@ -24,7 +24,7 @@ public final class InputParser {
     }
 
     /**
-     * Parses the JSON input
+     * Parses the JSON input file
      * @return a simulation object
      */
     public Simulation simulationLoader() throws IOException, ParseException {

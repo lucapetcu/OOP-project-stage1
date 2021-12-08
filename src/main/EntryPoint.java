@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public final class EntryPoint {
     /**
-     * Main method which performs the simulation and prints the output
+     * Main method which performs the simulation and writes the output array
      * @throws IOException
      * @throws ParseException
      */
