@@ -1,0 +1,13 @@
+//Petcu Luca
+//321CD
+
+Pentru parsarea JSON-ului de input am folosit functionalitatile puse la dispozitie
+de libraria org.simple.json. Clasa in care incarc toate aceste date este Simulation.
+Pentru a realiza simularea ma folosesc de design pattern-ul Visitor. Pentru a simula
+o runda, clasa Simulation este "visitata" de un ConcreteVisitor ce implementeaza interfata
+corespunzatoare. Metodele corespunzatoare pattern-ului sunt simulate(visitor, arrayResult)
+care este pe post de accept din laborator si visit(simulation, arrayResult) care este pe 
+post de vizitator. Pentru a formata output-ul folosesc libraria jackson. Informatiile 
+corespunzatoare fiecarui copil le retin intr-un LinkedHashMap, iar informatiile de la runda
+curenta le stochez intr-un ArrayList. La final, afisez tot ArrayList-ul in fisier, dupa ce 
+am setat optiunea de pretty print al json-ului.
