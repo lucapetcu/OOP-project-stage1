@@ -1,7 +1,6 @@
 package main;
 
 import checker.Checker;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 
@@ -18,7 +17,7 @@ public final class Main {
      * @param args
      *          the arguments used to call the main method
      */
-    public static void main(final String[] args) throws IOException, ParseException {
+    public static void main(final String[] args) throws IOException {
         EntryPoint entryPoint = new EntryPoint();
         entryPoint.action();
         Checker.calculateScore();

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import common.Constants;
 import entities.ConcreteVisitor;
 import entities.Simulation;
-import org.json.simple.parser.ParseException;
 import utils.InputParser;
 
 import java.io.File;
@@ -26,7 +25,7 @@ public final class EntryPoint {
      * @throws IOException
      * @throws ParseException
      */
-    public void action() throws IOException, ParseException {
+    public void action() throws IOException {
         File testDirectory = new File(Constants.INPUT_PATH);
         Path outputDir = Paths.get(Constants.OUTPUT_DIR);
 
