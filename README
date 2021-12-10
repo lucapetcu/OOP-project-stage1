@@ -2,7 +2,10 @@
 //321CD
 
 Pentru parsarea JSON-ului de input am folosit functionalitatile puse la dispozitie
-de libraria org.simple.json. Clasa in care incarc toate aceste date este Simulation.
+de libraria org.simple.json. Clasa InputParser este de tip Singleton, intrucat am nevoie
+de doar o instanta a acesteia pentru a parsa datele. Pentru a trece prin toate fisierele
+de intrare folosesc aceeasi instanta, doar ca actualizez numele fisierului, in metoda
+getInstance(). Clasa in care incarc toate aceste date este Simulation.
 Pentru a realiza simularea ma folosesc de design pattern-ul Visitor. Pentru a simula
 o runda, clasa Simulation este "visitata" de un ConcreteVisitor ce implementeaza interfata
 corespunzatoare. Metodele corespunzatoare pattern-ului sunt simulate(visitor, arrayResult)

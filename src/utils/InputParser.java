@@ -17,10 +17,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class InputParser {
-    private String inputFilePath;
+    private static String inputFilePath;
+    private static InputParser instance = null;
 
-    public InputParser(final String inputFilePath) {
-        this.inputFilePath = inputFilePath;
+    private InputParser(final String inputFilePath) {
+        InputParser.inputFilePath = inputFilePath;
+    }
+
+    /**
+     * Method used to provide the single instance of this class. It also updates
+     * the inputFilePath if the instance is already not null.
+     * @param inputFile name of the file to be parsed
+     * @return Singleton instance of the class
+     */
+    public static InputParser getInstance(final String inputFile) {
+        if (instance == null) {
+            instance = new InputParser(inputFile);
+        } else {
+            inputFilePath = inputFile;
+        }
+        return instance;
     }
 
     /**

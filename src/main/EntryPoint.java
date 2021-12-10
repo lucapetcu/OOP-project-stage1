@@ -23,7 +23,6 @@ public final class EntryPoint {
     /**
      * Main method which performs the simulation and writes the output array
      * @throws IOException
-     * @throws ParseException
      */
     public void action() throws IOException {
         File testDirectory = new File(Constants.INPUT_PATH);
@@ -58,7 +57,7 @@ public final class EntryPoint {
             boolean out = outputFile.createNewFile();
             FileWriter outFile = new FileWriter(outputFileName);
             if (out) {
-                InputParser inputParser = new InputParser(inputFileName);
+                InputParser inputParser = InputParser.getInstance(inputFileName);
                 Simulation simulation = inputParser.simulationLoader();
                 ConcreteVisitor visitor = new ConcreteVisitor();
                 List<Map<String, Object>> arrayResult = new ArrayList<>();
