@@ -1,16 +1,5 @@
-//Petcu Luca
-//321CD
-
-Pentru parsarea JSON-ului de input am folosit functionalitatile puse la dispozitie
-de libraria org.simple.json. Clasa InputParser este de tip Singleton, intrucat am nevoie
-de doar o instanta a acesteia pentru a parsa datele. Pentru a trece prin toate fisierele
-de intrare folosesc aceeasi instanta, doar ca actualizez numele fisierului, in metoda
-getInstance(). Clasa in care incarc toate aceste date este Simulation.
-Pentru a realiza simularea ma folosesc de design pattern-ul Visitor. Pentru a simula
-o runda, clasa Simulation este "visitata" de un ConcreteVisitor ce implementeaza interfata
-corespunzatoare. Metodele corespunzatoare pattern-ului sunt simulate(visitor, arrayResult)
-care este pe post de accept din laborator si visit(simulation, arrayResult) care este pe 
-post de vizitator. Pentru a formata output-ul folosesc libraria jackson. Informatiile 
-corespunzatoare fiecarui copil le retin intr-un LinkedHashMap, iar informatiile de la runda
-curenta le stochez intr-un ArrayList. La final, afisez tot ArrayList-ul in fisier, dupa ce 
-am setat optiunea de pretty print al json-ului.
+This is the first stage of my project for the OOP course. The implementation helps Santa
+Clause to distribute gifts to children using OOP concepts. First of all, in order to read
+the input I used the org.simple.json library and to write the output the Jackson library. I used
+some design patterns, such as Singleton for the database class and Visitor in order to 
+perform the gift assignation. Also, I used some data structures like LinkedHashMap or ArrayList.
